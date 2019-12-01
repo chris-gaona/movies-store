@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import { Button } from "antd";
 import { css } from "@emotion/core";
 import { Content, Footer, Header, Container } from "../components/Layout";
 
@@ -98,12 +97,6 @@ const HomePage = () => (
           </div>
           <div className="overview">{bannerConfig.overview}</div>
           <div className="price">{`$${bannerConfig.price}`}</div>
-          <div className="action">
-            <Button>Purchase</Button>
-            <Button href="https://www.youtube.com/watch?v=5mkm22yO-bs&t=1s">
-              Watch Trailer
-            </Button>
-          </div>
         </div>
         <Link href={`/product/${bannerConfig.id}`}>
           <img

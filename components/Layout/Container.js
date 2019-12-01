@@ -2,7 +2,6 @@ import Head from "next/head";
 import React from "react";
 import { css } from "@emotion/core";
 import { node, string, oneOfType } from "prop-types";
-import { Layout } from "antd";
 
 const layoutCls = css`
   background: #152530;
@@ -10,12 +9,12 @@ const layoutCls = css`
   font-family: Lato;
 `;
 const Container = ({ children, title = "Movies Store" }) => (
-  <Layout css={layoutCls} className="layout">
+  <div css={layoutCls} className="layout">
     <Head>
       <title>{title}</title>
     </Head>
     {children}
-  </Layout>
+  </div>
 );
 Container.propTypes = {
   children: oneOfType([node, string]),

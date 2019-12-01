@@ -1,11 +1,7 @@
 import React from "react";
 import { node, string, oneOfType } from "prop-types";
-import { Layout } from "antd";
 
-const AppContent = Layout.Content;
-const Content = ({ children, ...props }) => (
-  <AppContent {...props}>{children}</AppContent>
-);
+const Content = ({ children, ...props }) => <div {...props}>{children}</div>;
 Content.propTypes = {
   children: oneOfType([node, string])
 };
